@@ -1,0 +1,200 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>ISS Web Publishing - Newcastle University</title>
+    <style type="text/css">
+gjgjgjgj
+
+body
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 75%;
+  color: #3C3307;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+  font-size:100%;
+}
+
+a
+{
+  color: ;
+  text-decoration:none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+#wrapper
+{
+  width: 753px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+#container
+{
+  margin: 0 18px 0 37px;
+}
+
+#nav
+{
+  background: #E1D7A1;
+  font-weight: normal;
+  border-top: 1px solid #79670D;
+  border-bottom: 1px solid ;
+  margin-left: -20px;
+  padding: 0 10px 0 18px;
+  height: 26px;
+}
+
+#nav ul
+{
+  display: inline;
+  list-style-type: none;
+}
+
+#nav ul li
+{
+  display: block;
+  float: left;
+}
+
+#nav ul li a
+{
+  color: #3C3307;
+  background: #E9E1B9;
+  height: 16px;
+  width: 90px;
+  font-size: .9em;
+  padding: 10px 0 0 0;
+  margin-right: 5px;
+  border-left: 1px solid #79670D;
+  border-right: 1px solid #79670D;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+#nav ul li a:hover
+{
+  color: #3C3307;
+  background: #ffffff;
+}
+
+
+#content
+{
+  width: 468px;
+  margin: 15px 8px;
+  float: left;
+}
+
+#sidebar
+{
+  width: 177px;
+  font-size: x-small;
+  margin: 15px 8px;
+  padding: 0 9px 0 10px;
+  float: right;
+}
+
+#sidebar ul
+{
+  margin: 10px 0;
+  padding: 0;
+  list-style-type: none;
+}
+	
+    </style>
+  </head>
+
+<body id="index">
+  <div id="wrapper">
+    <div id="container">
+
+      <div id="nav">
+        <ul>
+          <li><a href="./" title="Your Homepage">Home</a></li>
+          <li><a href="http://www.ncl.ac.uk/iss/" title="Information Systems &amp; Services">ISS</a></li>
+          <li><a href="http://www.ncl.ac.uk/iss/web/" title="ISS Web Information">ISS Web Info.</a></li>
+          <li><a href="http://www.ncl.ac.uk/web-development/" title="Web Development Resources">Web Dev.</a></li>
+          <li><a href="http://www.ncl.ac.uk/iss/search/" title="ISS Site Search">ISS Search</a></li>
+        </ul>
+      </div>
+
+      <div id="content">
+        <h3>ISS Web Publishing</h3>
+        <p>
+          Welcome to the <a href="http://www.ncl.ac.uk/iss/" title="Information Systems and 
+Services">ISS</a> Web Publishing Service for members of the <a href="http://www.ncl.ac.uk">Newcastle 
+University</a>.
+        </p>
+        <p>
+          This page (the file <em>iss_example.html</em>) is created by default when your web publishing account is set up. Now that you can read this,
+          your account is ready for use. You can use this page as a starting point for developing
+          your own site, or you can upload something completely new. We recommend you keep a copy of this page for
+          your reference.
+        </p>
+        <p>
+          The useful resources section points you to some information which you may find helpful when developing your site.
+          This is a small subset of the resources which are available - you can find further resources by using the <a href="http://www.ncl.ac.uk/search/">University 
+          Search Engine</a>, or by using <a href="http://www.google.com">Google</a>.
+        </p>
+        <p>
+          For beginners, you might like to start by viewing the source code of this page (commonly via the View -&gt; Source menu option in your browser).
+          That should show you how a basic <abbr title="HyperText Markup Language">HTML</abbr> page is set up, along with a little bit
+          of <a href="http://www.htmlhelp.com/reference/css/quick-tutorial.html" title="Cascading Style Sheets">CSS</a> to make it look nice.
+        </p>
+        <p>
+          If you are looking for something more than basic HTML, the <a href="http://www.ncl.ac.uk/web-development/guides/php/">PHP Scripting Language</a> is 
+          installed on this server. If you need a database, you can <a href="http://www.ncl.ac.uk/iss/web/infrastructure/databases/">apply for a MySQL account</a>.
+        </p>
+        <p>
+          We aim to provide as much information as possible via the pages at <a href="http://www.ncl.ac.uk/iss/web/">http://www.ncl.ac.uk/iss/web/</a>,
+          if you can't find what you're looking for, then you can <a href="http://www.ncl.ac.uk/iss/search/">search the ISS site</a>. If you're still
+          struggling, you can email <a href="mailto:webmaster@ncl.ac.uk">webmaster@ncl.ac.uk</a> and we'll try our best to help.
+        </p>
+        <p>
+          This page is currently appearing as your default homepage. When you upload a file named index.html, this will become your default in it's place.
+        </p>
+        <p>
+          <em>ISS Web Team</em>
+        </p>
+      </div>
+
+      <div id="sidebar">
+        <h3>Useful Resources</h3>
+        <h4>General</h4>
+        <ul>
+          <li><a href="http://www.ncl.ac.uk/iss/web/">ISS Web</a></li>
+          <li><a href="http://www.ncl.ac.uk/corporate-web-development">Corporate Web Development (official units only)</a></li>
+          <li><a href="http://www.ncl.ac.uk/web-development/">Web Development Resources</a></li>
+          <li><a href="http://www.w3schools.com/html/html_intro.asp">W3Schools - web development tutorials</a></li>
+          <li><a href="http://www.alistapart.com/articles/alaprimer2">ALA: Web Primer for Beginners</a></li>
+        </ul>
+        <h4>Technical Information</h4>
+        <ul>
+          <li><a href="http://www.ncl.ac.uk/iss/web/technology/">Server Configurations</a></li>
+        </ul>
+        <h4>Troubleshooting</h4>
+        <ul>
+          <li><a href="http://www.ncl.ac.uk/iss/web/support/guides/permissions.php">Setting File Permissions</a></li>
+        </ul>
+        <h4>Rules</h4>
+        <ul>
+          <li><a href="http://www.ncl.ac.uk/iss/getstarted/rules/">Rules of Use</a></li>
+          <li><a href="http://www.ncl.ac.uk/iss/web/support/rules/index.php">Guidelines for Web Publishers</a></li>
+        </ul>
+        <p>v0.5 :: 11/03/2009 13:56:47</p>
+      </div>
+         
+    </div>
+
+  </div>
+</body>
+</html>
