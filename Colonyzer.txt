@@ -1,0 +1,23 @@
+####################################
+# Colonyzer information file
+####################################
+# Please input comma-separated default values for:
+# No. of spots, top left spot x, top left spot y, bottom right spot x, bottom right spot y
+# Where the x and y coordinates refer to the centres of the spots
+# with y-axis increasing moving from top of image towards bottom
+# with x-axis increasing moving from left of image towards right.
+# This is the default reading you get hovering mouse pointer over
+# an image in ImageJ (http://rsbweb.nih.gov/ij/) for example.
+# Note that the comma-separated list must be preceded by:
+# default
+####################################
+
+default,384,454,289,4864,3197
+
+####################################
+# Please input any image specific differences here
+# same format as before, but include the filename 
+# of the image followed by spot no. and coordinates
+# as above
+####################################
+K000207_033_044_2013-06-19_08-02-08.JPG,384,454,289,4864,3197

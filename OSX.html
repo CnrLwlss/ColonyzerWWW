@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang=en> 
+<head>
+<meta charset=utf-8> 
+<title>Colonyzer</title>
+<meta name="desciption" content="Image analysis software for estimating cell density in arrayed microbial cultures growing on solid agar.">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="STYLESHEET" href="CLstyle.css" type="text/css">
+</head>
+
+<body>
+
+<header>
+<a href="http://www.flickr.com/photos/conchur/8187964744/" title="FourCulturesCropped by Conor Lawless, on Flickr">
+<img src="http://farm9.staticflickr.com/8489/8187964744_583f1264b2_m.jpg" width="180" alt="FourCulturesCropped" style="display: inline; float:left; margin-right: 5px; margin-bottom: 30px;">
+</a><h1><a href="http://research.ncl.ac.uk/colonyzer">Colonyzer</a>: installation under OSX</h1>
+<hr></hr>
+</header>
+
+<article>
+
+<p>I don't have regular access to OSX machines, but <a href="http://ccsb.dfci.harvard.edu/web/www/ccsb/personnel/ccsbstaff.html">Katja Luck</a> and <a href="http://ccsb.dfci.harvard.edu/web/www/ccsb/personnel/ccsbstaff.html">Adriana San Miguel</a> have kindly provided the notes below which outline successful installation on various flavours of OSX.</p> 
+
+<ol>
+<li>Install <a href="http://python.org/download/">python 2.7</a> from <a href="http://python.org/">python.org</a> and make sure it's the python version used by the system </li>
+<li>Install the most recent version of <a href="https://developer.apple.com/xcode/">Xcode</a> for your operating system (needed by <a href="http://brew.sh/">homebrew</a>)<ul>
+	<li>Updating current installation is not possible</li>
+	<li>Delete current <a href="https://developer.apple.com/xcode/">Xcode</a> installation from applications folder by simply trashing the <a href="https://developer.apple.com/xcode/">Xcode</a> app</li>
+	<li>Install new <a href="https://developer.apple.com/xcode/">Xcode</a></li>
+	<li>With the newer versions of <a href="https://developer.apple.com/xcode/">Xcode</a>, install <a href="https://developer.apple.com/xcode/">Xcode</a> command line tools via preferences/download.  With older versions of <a href="https://developer.apple.com/xcode/">Xcode</a>, this is given as an option during Xcode installation</li>
+	</ul></li>
+<li>Install  <a href="http://brew.sh/">homebrew</a><ul>
+	<li>type into terminal:
+	<pre>ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"</pre></li>
+	<li>different procedure for Mac OS X 10.5, see webpage <a href="http://brew.sh/">http://brew.sh/</a></li>
+	<li>type in terminal:
+	<pre>brew doctor</pre></li>
+	<li>WARNING: brew may complain about order of paths</li>
+	</ul></li>
+<li>Change path in <a href="http://www.linuxfromscratch.org/blfs/view/6.3/postlfs/profile.html">.bash_profile</a> for  <a href="http://brew.sh/">homebrew</a><ul>
+	<li><a href="http://apple.stackexchange.com/questions/53057/homebrew-path-error-mac-os-x-10-6-8">http://apple.stackexchange.com/questions/53057/homebrew-path-error-mac-os-x-10-6-8</a></li>
+	<li>Look in your home directory ('cd ~' to get there, 'ls -a' to look) for a .bash_profile or .bashrc file.</li>
+	<li>If you find one of them, open it up and you should see a line like this:
+	<pre>export PATH=/usr/bin:/usr/local/bin:/opt/local/sbin:$PATH</pre></li>
+	<li>Cut the "/usr/bin:" and paste it after the "/usr/local/bin:"</li>
+	<li>If you don't find either of those files, create one called .bash_profile and put this line inside:
+	<pre>export PATH=/usr/local/bin:$</pre></li>
+	</ul></li>
+<li>installation of <a href="http://gcc.gnu.org/wiki/GFortran">gfortran</a> compiler with <a href="http://brew.sh/">homebrew</a> (needed for scipy):<ul>
+	<li>type into terminal:
+	<pre>brew install gfortran</pre></li>
+	</ul></li>
+<li>installation of <a href="http://libjpeg.sourceforge.net/">libjpeg</a> library with <a href="http://brew.sh/">homebrew</a> (needed for PIL):<ul>
+	<li>type into terminal:
+	<pre>brew install libjpeg</pre></li>
+	</ul></li>
+<li>installation of <a href="https://pypi.python.org/pypi/pip">pip</a> package manager and the dependency:<ul>
+	<li><a href="https://pypi.python.org/pypi/pip">https://pypi.python.org/pypi/pip</a></li>
+	<li><a href="http://www.pip-installer.org/en/latest/installing.html">http://www.pip-installer.org/en/latest/installing.html</a></li>
+	<li>downloaded the scripts ez_setup.py and get-pip.py for installing the ez_setup dependency for <a href="https://pypi.python.org/pypi/pip">pip</a> and <a href="https://pypi.python.org/pypi/pip">pip</a> itself</li>
+	</ul></li>
+<li>installation of <a href="http://www.numpy.org/">numpy</a>, <a href="http://www.scipy.org/">scipy</a>, <a href="http://www.pythonware.com/products/pil/">PIL</a>, <a href="http://pandas.pydata.org/">pandas</a>, <a href="http://matplotlib.org/">matplotlib</a> with <a href="https://pypi.python.org/pypi/pip">pip</a>:<ul>
+	<li>type in terminal:
+	<pre>pip install package_name</pre>
+	</ul></li>
+<li>for installation of <a href="http://www.pygame.org/">pygame</a>:<ul>
+	<li><a href="http://jalada.co.uk/2011/06/17/installing-pygame-on-os-x-with-a-homebrew-python-2-7-install.html">http://jalada.co.uk/2011/06/17/installing-pygame-on-os-x-with-a-homebrew-python-2-7-install.html</a></li>
+	<li>install some dependencies first with <a href="http://brew.sh/">homebrew</a> - type into terminal:
+	<pre>brew install sdl sdl_ttf sdl_image sdl_mixer</pre></li>
+	<li>for a reason I can't remember the following instructions on that page did not work for us, so we installed the .dmg file from pygame.org for python 2.7 and Mac
+	</ul></li>
+<li>install <a href="http://research.ncl.ac.uk/colonyzer/">colonyzer</a> with pip<ul>
+	<li>type into terminal:
+	<pre>pip install Colonyzer2</pre></li>
+	<li>this brought some warnings about a scripts.py file that it couldn't locate but still said that installation was successful</li>
+<li>for running <a href="http://research.ncl.ac.uk/colonyzer/">colonyzer</a> we had to do the following trick:<ul>
+	<li>first, run parametryzer as follows in terminal in folder that contains the image:
+	<pre>python2.7-32 path_to_parametryzer/parametryzer</pre>
+	<li>run independent as usual:
+	<pre>independent</pre></li>
+	</ul></li>
+</ol>
+	
+
+<p>Tips for installing <a href="http://research.ncl.ac.uk/colonyzer/">colonyzer</a> on Mac OS X 10.5.8:
+<ul>
+<li>brew could not install the gfortran compiler<ul>
+	<li>I downloaded the installer directly from the web</li>
+</ul></li>
+<li>pip could not install <a href="http://matplotlib.org/">matplotlib</a> but using an installer from the web worked out</li>
+<li>for this Mac OS X version only a python 2.7. 32 bit version was available from python.org<ul>
+	<li>this led to the fact that parametryzer runs again without the extra specification of python2.7-32</li>
+	</ul></li>
+</p>
+
+<p>Tips for installing <a href="http://research.ncl.ac.uk/colonyzer/">colonyzer</a> on Max OS X 10.8.4:
+<ul>
+<li>installation of <a href="http://matplotlib.org/">matplotlib</a> required prior installation of <a href="http://www.freetype.org/">freetype</a>:
+<pre>brew install freetype</pre></li>
+<li>web page with detailed infos: <a href="www.tapir.caltech.edu/~dtsang/python.html">www.tapir.caltech.edu/~dtsang/python.html</a></li>
+</ul>
+
+<p>In general, I think that the most important thing in getting colonyzer running is to have python 2.7 installed from python.org.
+It automatically will use this python version as the current python version once it is installed, which is very helpful.</p>
+
+<p>The pip package manager then, too, uses this python version and my impression is that when installing pygame with a .dmg file, it also finds this python version.</p>
+
+<p>I can only warn people not to use MacPorts as package manager to install the colonyzer dependencies because I think this uses the mac-intern python version.</p>
+
+
+</article>
+
+</body>
+</html>
