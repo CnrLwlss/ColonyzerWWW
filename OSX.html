@@ -19,7 +19,9 @@
 
 <article>
 
-<p>I don't have regular access to OSX machines, but <a href="http://ccsb.dfci.harvard.edu/web/www/ccsb/personnel/ccsbstaff.html">Katja Luck</a> and <a href="http://ccsb.dfci.harvard.edu/web/www/ccsb/personnel/ccsbstaff.html">Adriana San Miguel</a> have kindly provided the notes below which outline successful installation on various flavours of OSX.</p> 
+<p>I don't have regular access to OSX machines, but <a href="http://ccsb.dfci.harvard.edu/web/www/ccsb/personnel/ccsbstaff.html">Katja Luck</a> and <a href="http://ccsb.dfci.harvard.edu/web/www/ccsb/personnel/ccsbstaff.html">Adriana San Miguel</a> have kindly provided the notes below which outline the steps to successful installation on various flavours of OSX.</p> 
+
+<h2>General installation notes</h2>
 
 <ol>
 <li>Install <a href="http://python.org/download/">python 2.7</a> from <a href="http://python.org/">python.org</a> and make sure it's the python version used by the system </li>
@@ -82,31 +84,27 @@
 </ol>
 	
 
-<p>Tips for installing <a href="http://research.ncl.ac.uk/colonyzer/">colonyzer</a> on Mac OS X 10.5.8:
+<h3>Tips for installing <a href="http://research.ncl.ac.uk/colonyzer/">colonyzer</a> on Mac OS X 10.5.8</h3>
 <ul>
-<li>brew could not install the gfortran compiler<ul>
-	<li>I downloaded the installer directly from the web</li>
-</ul></li>
-<li>pip could not install <a href="http://matplotlib.org/">matplotlib</a> but using an installer from the web worked out</li>
-<li>for this Mac OS X version only a python 2.7. 32 bit version was available from python.org<ul>
-	<li>this led to the fact that parametryzer runs again without the extra specification of python2.7-32</li>
+<li>brew could not install the gfortran compiler, so we downloaded the installer directly from the web</li>
+<li>pip could not install <a href="http://matplotlib.org/">matplotlib</a> but using an installer from the web worked</li>
+<li>For this version of OS X, the only version of python available from <a href="http://python.org">python.org</a> was a 32-bit version of python 2.7<ul>
+	<li>this allowed us to run parametryzer without the extra specification of python2.7-32</li>
 	</ul></li>
 </p>
 
-<p>Tips for installing <a href="http://research.ncl.ac.uk/colonyzer/">colonyzer</a> on Max OS X 10.8.4:
+<h3>Tips for installing <a href="http://research.ncl.ac.uk/colonyzer/">colonyzer</a> on Max OS X 10.8.4</h3>
 <ul>
-<li>installation of <a href="http://matplotlib.org/">matplotlib</a> required prior installation of <a href="http://www.freetype.org/">freetype</a>:
+<li>Installation of <a href="http://matplotlib.org/">matplotlib</a> required prior installation of <a href="http://www.freetype.org/">freetype</a>:
 <pre>brew install freetype</pre></li>
-<li>web page with detailed infos: <a href="www.tapir.caltech.edu/~dtsang/python.html">www.tapir.caltech.edu/~dtsang/python.html</a></li>
+<li>Web page with detailed information: <a href="www.tapir.caltech.edu/~dtsang/python.html">www.tapir.caltech.edu/~dtsang/python.html</a></li>
 </ul>
+</p>
 
-<p>In general, I think that the most important thing in getting colonyzer running is to have python 2.7 installed from python.org.
-It automatically will use this python version as the current python version once it is installed, which is very helpful.</p>
+<p>In general, we think that it is important to install python 2.7 from <a href="http://python.org">python.org</a>.
+Once it is installed it is automatically set as the default python version, which is very helpful.  The pip package manager then uses this python version and our impression is that when installing pygame from a .dmg file, it also finds this python version.</p>
 
-<p>The pip package manager then, too, uses this python version and my impression is that when installing pygame with a .dmg file, it also finds this python version.</p>
-
-<p>I can only warn people not to use MacPorts as package manager to install the colonyzer dependencies because I think this uses the mac-intern python version.</p>
-
+<p>We can only warn people not to use MacPorts as package manager to install the colonyzer dependencies because I think this uses the mac-internal python version.</p>
 
 </article>
 
