@@ -10,14 +10,9 @@
 
 <body>
 
-<header>
-<a href="http://www.flickr.com/photos/conchur/8187964744/" title="FourCulturesCropped by Conor Lawless, on Flickr">
-<img src="http://farm9.staticflickr.com/8489/8187964744_583f1264b2_m.jpg" width="180" alt="FourCulturesCropped" style="display: inline; float:left; margin-right: 5px; margin-bottom: 30px;">
-</a><h1>Colonyzer: quantifying the size of microbial cultures</h1>
-<hr></hr>
-</header>
-
 <nav id="nav">
+<a href="http://www.flickr.com/photos/conchur/8187964744/" title="FourCulturesCropped by Conor Lawless, on Flickr">
+<img src="https://farm9.staticflickr.com/8489/8187964744_83623ca2c2_z_d.jpg" alt="FourCulturesCropped"></a>
 <h4>Contents</h4>
 <ul>
 	<li><a href="#background">Background</a></li>
@@ -30,12 +25,12 @@
 <h4>Other software</h4>
 <ul>
 	<li><a href="http://qfa.r-forge.r-project.org/">qfa R package</a></li>
-	<li><a href="http://bioinf1.ncl.ac.uk/qfa">QFAViz</a></li>
+	<li><a href="http://bsu-srv.ncl.ac.uk/dixy/viz/">DIXY</a></li>
 </ul>
 
 <h4>References</h4>
 <ul>
-<li><a href="http://dx.doi.org/pgen.1001362">Addinall et al., 2011</a></li>
+<li><a href="http://dx.doi.org/10.1371/journal.pgen.1001362">Addinall et al., 2011</a></li>
 <li><a href="http://dx.doi.org/10.3791/4018">Banks et al., 2012</a></li>
 <li><a href="http://dx.doi.org/10.1186/1471-2105-11-287">Lawless et al., 2010</a></li>
 <li><a href="http://research.ncl.ac.uk/qfa">QFA website</a></li>
@@ -48,32 +43,42 @@
 </ul>
 </nav>
 
-<article>
+<article id="main">
+<h1>Colonyzer: quantifying the size of microbial cultures</h1>
+<hr></hr>
+
 <a name="background"><h2>Background</h2></a>
 
 <p>Colonyzer is an image analysis tool for quantifying the cell density of arrays of independent micro-organism cultures growing on solid agar.  It specialises in being sensitive enough to detect the presence of cultures with extremely low cell density arising after dilute liquid inoculation onto agar from photographs of plates.  Identifying cultures with few cells growing on an agar surface by photography or after scanning is difficult because culture opacity might not be high enough for colour differences between agar and cells to be apparent. In order to achieve its high levels of sensitivity, it relies on sophisticated algorithms for the identification and detection of lighting gradients in the photograph, and for the detection of thin, semi-translucent developing cultures in the corrected images.</p>
 
-<iframe src="http://player.vimeo.com/video/26721621?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="550" height="309" frameborder="0" title="testing"></iframe>
+<div class="container">
+<iframe src="https://player.vimeo.com/video/26721621?autoplay=1&loop=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="video"></iframe>
+</div>
 
 <p>Colonyzer is suitable for high-throughput screening of libraries of yeast mutants for example, and has proven extremely useful in the estimation of phenotypes such as exponential growth rate, appropriate for genome-wide investigations of genetic interaction.  Colonyzer was used for cell density estimation in <a href="http://www.plosgenetics.org/doi/pgen.1001362">Addinall et al. 2011</a> and <a href="http://dx.doi.org/10.1534/g3.111.000216">Chang et al. 2011</a> for example.  A detailed description of Colonyzer, its algorithms, the motivation for its development, and some example analysis can be found in <a href="http://dx.doi.org/10.1186/1471-2105-11-287">Lawless et al. 2010</a>, and an example of how Colonyzer fits into the <a href="http://research.ncl.ac.uk/qfa/">Quantitative Fitness Analysis</a> workflow can be seen in <a href="http://dx.doi.org/10.3791/4018">Banks et al. 2012</a>.</p>
 
-<a href="Fig2ColonyzerManuscript.png" title="Yeast Growth Curves, Fig 2, Lawless et al 2010"><img src="Fig2ColonyzerManuscript.png" width="550" alt="Yeast Growth Curves"></a> 
+<a href="Fig2ColonyzerManuscript.png" title="Yeast Growth Curves, Fig 2, Lawless et al 2010"><img src="Fig2ColonyzerManuscript.png" alt="Yeast Growth Curves"></a> 
 
 <a name="install"><h2>Installation</h2></a>
 
-<p>Colonyzer has been developed using <a href="http://www.python.org/">Python 2.7</a> and several Python modules: <a href="http://www.numpy.org/">numpy</a>, <a href="http://www.scipy.org/">scipy</a>, <a href="http://pandas.pydata.org/">pandas</a>, <a href="http://www.pythonware.com/products/pil/">pil</a>, <a href="http://matplotlib.org/">matplotlib</a> & <a href="http://www.pygame.org/">pygame</a>.  The Colonyzer <a href="https://github.com/CnrLwlss/Colonyzer">GitHub pages</a> contain the latest development code.  The Colonyzer <a href="https://pypi.python.org/pypi/Colonyzer2">PyPI</a> pages include a version which is easy to install using <a href="https://pypi.python.org/pypi/pip">pip</a>.  The easiest way to get up and running with Colonyzer is to install Python 2.7, install the pip package manager for Python and then use pip to install the required modules and Colonyzer itself.  To install Python 2.7 under Windows or OSX, download and run the installer appropriate for your machine <a href="http://www.python.org/download/">here</a>.  Python is included with most versions of Linux by default.  Instructions for installing the package manager pip can be found <a href="http://www.pip-installer.org/en/latest/installing.html">here</a> though Windows users might find <a href="http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows">these instructions</a> clearer.</p>
+<p>Colonyzer has been developed using <a href="http://www.python.org/">Python</a> and several Python modules: <a href="http://www.numpy.org/">numpy</a>, <a href="http://www.scipy.org/">scipy</a>, <a href="http://pandas.pydata.org/">pandas</a>, <a href="http://www.pythonware.com/products/pil/">pil</a>, <a href="http://matplotlib.org/">matplotlib</a> & optionally <a href="http://www.pygame.org/">pygame</a>.  The Colonyzer <a href="https://github.com/CnrLwlss/Colonyzer">GitHub pages</a> contain the latest development code.  The Colonyzer <a href="https://pypi.python.org/pypi/Colonyzer2">PyPI</a> pages include a version which is easy to install using <a href="https://pypi.python.org/pypi/pip">pip</a>.  The easiest way to get up and running with Colonyzer is to install Python, install the pip package manager for Python and then use pip to install the required modules and Colonyzer itself.  To install Python under Windows or OSX, download and run the installer appropriate for your machine <a href="http://www.python.org/download/">here</a>.  Python is included with most versions of Linux by default.  Python3 includes the pip package manager by default.  Instructions for installing pip for earlier versions of python can be found <a href="http://www.pip-installer.org/en/latest/installing.html">here</a> though Windows users might find <a href="http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows">these instructions</a> clearer.</p>
 
 <h3>Installation under Microsoft Windows</h3>
 
 <p>After installing python and pip, you will need to ensure that the python installation directory (e.g. "C:\Python27" and "C:\Python27\Scripts") are included in your path.  See <a href="http://www.faqforge.com/windows/setting-the-path-environmental-variable-on-windows-7/">this FAQ</a> for a description of how to set your path under Windows 7.</p>
 
 <h4>32-bit Windows</h4>
-<p>Once both <a href="http://www.python.org/">Python 2.7</a> and <a href="http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows">pip</a> are installed, the required packages (including Colonyzer itself) can be installed by typing the following  at the command prompt.  You can typically get a command terminal in Windows by searching for the <code>cmd</code> program (e.g. Start -> Search -> Cmd).  Note that Windows users will have to right click on the Cmd icon and Run As Administrator.  Onece you have a command terminal window open, type or paste the following command and press enter at the end of the line:</p>
+<p>Once both <a href="http://www.python.org/">Python 2.7</a> and <a href="http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows">pip</a> are installed, the required packages (including Colonyzer itself) can be installed by typing the following  at the command prompt.  You can typically get a command terminal in Windows by searching for the <code>cmd</code> program (e.g. Start -> Search -> Cmd).  Note that Windows users will have to right click on the Cmd icon and Run As Administrator.  Once you have a command terminal window open, type or paste the following command and press enter at the end of the line:</p>
 
 <p><code>pip install numpy scipy pandas pil matplotlib pygame Colonyzer2</code></p>
 
+<p>If you are having problems installing packages directly with pip, please download the relevant .whl files from the <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Unofficial Windows Binaries for Python Extension Packages</a> page.  .whl files can be installed by navigating to the directory containing the relevant file and executing the following command, for example:</p>
+
+<p><code>pip install numpy-1.9.2+mkl-cp27-none-win32.whl</code></p>
+
 <h4>64-bit Windows</h4>
-<p>Unfortunately, it is not possible to install 64-bit versions of several Python packages using Pip under windows.  To install these packages manually, locate and install the following packages from the <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Unofficial Windows Binaries for Python Extension Packages</a> website:</p>
+<p>Unfortunately, it is not possible to install 64-bit versions of several Python packages using Pip under windows.  As such, even with a 64-bit machine, it is probably easier to just install 32 bit Python and Python packages under windows.</p>
+<p>If you do need to install 64-bit versions, you should install packages manually, locate and install the .whl files for the following packages from the <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Unofficial Windows Binaries for Python Extension Packages</a> website:</p>
 
 <p><code>numpy scipy pandas pil matplotlib pygame</code></p>
 
@@ -103,48 +108,24 @@
 <p>Colonyzer can be used to analyse single timepoint plate images or image timecourses.  Capturing a timecourse allows generation of microbial growth curves and allows us to infer strain fitnesses (using the <a href="http://research.ncl.ac.uk/qfa/">QFA</a> <a href="http://qfa.r-forge.r-project.org/">R package</a> for example.</p>
 
 <ul>
-<li>Capture a timecourse series of photographs of microbial cultures spotted in onto a solid agar plate (some demo image files <a href="https://www.dropbox.com/sh/vysi7p1s0m2r7by/UnAgXDwALT">here</a>) or equivalent single snapshots.</li>
+<li>Capture a timecourse series of photographs of microbial cultures spotted in onto a solid agar plate (some demo image files <a href="ColonyzerImages.zip">here</a>) or equivalent single snapshots.</li>
 <li>Name the photographs using the first 15 characters as a plate identifier, with further characters for identifying particular images in a series.  For timecourse images the chronological order of the image identifiers should correspond to their alphabetical order (e.g. a timestamp YYYY-MM-DD_HH-MM-SS would be appropriate).  Image names following this patten are ideal: W000155_030_001_2009-06-30_14-36-26.jpg.
-<li>Collect all image files to be analysed (can be multiple images of multiple plates) into one directory.  To capture raw data for analysis with Colonyzer:
+<li>Collect all image files to be analysed (can be multiple images of multiple plates) into one directory.
 </ul>
 
 <h3>Analyzing images</h3>
 
-<p>Briefly, the command-line tools available to you after installing Colonyzer2 are:
-<ul>
-<li>timecourse</li>
-<li>fixedpos</li>
-<li>parametryzer</li>
-<li>independent</li>
-</ul>
+<p>Once Python and the relevant packages (including Colonyzer itself) are installed, and once your Python path has been set up correctly, to analyse images with Colonyzer, simply navigate to the directory containing the images and execute the colonyzer program by typing <code>colonyzer</code> followed by a range of optional arguments.  Colonyzer will search the current directory for image files and begin analysing.  The default analysis assumes a 384-format plate where lighting correction is not required and both image segmentation and spot location are automatic. Available options can be seen by accessing help from the commandline <code>colonyzer -h</code> and are also listed <a href="https://github.com/CnrLwlss/Colonyzer/blob/master/CommandLine.md">here</a></p>
 
-<h4>timecourse</h4>
+<p>For example, you can run some analysis on a 96-format plate with lighting correction turned on, fixing the segmentation threshold at 100 by executing the following:</p>
 
-<p>timecourse will automatically locate the cultures in a timeseries of images of the same plate (imaged repeatedly in place: ie cultures do not move relative to camera between images, must have multiple images of the same plate for timecourse to work).  Images should be named according to the convention specified above.  Open a terminal window in the directory containing the images (or navigate to that directory) and type this command (followed by enter) to analyse all of the images:</p>
+<p><code>colonyzer -o 96 -c -f 100</code></p>
 
-<code>timecourse</code>
+<h4>Parametryzer</h4>
 
-<p>The default is to assume that plates are inoculated in 384-format.  You can specify what format cultures are inoculated by specifying an extra argument:</p>
+<p>For some images, automatic location of arrayed cultures can prove difficult.  For example, if there are so few strong growers on a plate that it is difficult to figure out unambiguously where the grid is, or if the plate wall has been imaged along with cells and its signal strength is as strong as that of the colonies, it can interfere with automatic location.  In that case, you can provide a calibration file, providing a first guess at the position of the gridded array of spots on the plate.   An example calibration file, including its own format instructions (and which must be named Colonyzer.txt) can be seen <a href="Colonyzer.txt">here</a>.  These files can be generated/edited manually using a text editor if required.</p>
 
-<code>
-timecourse 384
-timecourse 96
-timecourse 1536
-</code>
-
-<p>You can disable lighting correction (e.g. to speed up analysis where lighting gradients are not strong, or where lighting correction interferes with thresholding or culture location) using the <code>no-lc</code> flag:</p>
-
-<p>
-<code>
-timecourse --nolc
-</code>
-</p>
-
-<h4>fixedpos & parametryzer</h4>
-
-<p>If automatic location of arrayed cultures is proving difficult (e.g. there are so few strong growers on a plate that it is difficult to figure out unambiguously where the grid is), you can use fixedpos, together with a calibration file specifying initial guesses for corner locations on the plate.  An example calibration file, including its own format instructions (and which must be named Colonyzer.txt) can be seen <a href="Colonyzer.txt">here</a>.</p>
-
-<p>Instead of writing a calibration file manually, parametryzer is a tool to help you generate one semi-automatically by clicking on images.  Simply navigate to the directory containing your images, execute:</p>
+<p>Instead of writing a calibration file manually, Parametryzer is a GUI tool to help you generate one semi-automatically by clicking on images.  Simply navigate to the directory containing your images, execute:</p>
 
 <code>
 parametryzer 
@@ -153,25 +134,8 @@ parametryzer
 <p>and follow the on-screen instructions.  Once this program has run its course it writes a Colonyzer.txt file into the directory, ready for fixedpos to read.  Once you have such a file in the same directory as the images to be analysed, you can now execute Colonyzer using the spot location calibrations as initial guesses like this:</p>
 
 <code>
-fixedpos
+colonyzer -i
 </code>
-
-<p>As for timecourse, you can disable lighting correction (but note that plate format should be specified in Colonyzer.txt):</p>
-
-<p>
-<code>
-fixedpos --nolc
-</code>
-</p>
-
-<h4>independent</h4>
-<p>Finally, executing the following command:</p>
-
-<code>
-independent
-</code>
-
-<p>will treat all images separately (will not treat them as a timecourse) very much like the original Colonyzer algorithm.  This can be useful in several circumstances (e.g. when plates are positioned differently at each timepoint, or where lighting varies between images), but is slower and more noisy than the other alternatives.  This also requires a Colonyzer.txt file, generated by parametryzer and also takes the optional --no-lc argument.</p>
 
 <a name="dev"><h2>Development</h2></a>
 <p>Colonyzer2 is under development on <a href="https://github.com/CnrLwlss/Colonyzer">github</a>.  Feel free to fork the repo and to submit pull requests.  <a href="http://www.eko.uj.edu.pl/index.php/pl/instytut/pracownicy/userprofile/158">Marcin Plech</a> has contributed many useful bugfixes to the latest version of the software.  <a href="http://ccsb.dfci.harvard.edu/web/www/ccsb/personnel/ccsbstaff.html">Katja Luck</a> and <a href="http://ccsb.dfci.harvard.edu/web/www/ccsb/personnel/ccsbstaff.html">Adriana San Miguel</a> have provided useful documentation for installation under OSX.</p>
@@ -189,6 +153,10 @@ independent
 
 <p>The <a href="http://qfa.r-forge.r-project.org/">qfa R package</a> has been developed to further analyse the data, construct growth curves and infer culture fitnesses, and is compatible with either version of Colonyzer.</p>
 </article>
+
+<footer id="footer">
+<p>Copyright &copy; <a href="https://www.staff.ncl.ac.uk/conor.lawless/">Conor Lawless</a><br>Last edited: September 2015</p>
+</footer>
 
 </body>
 </html>
